@@ -1,0 +1,184 @@
+{
+	"test_panel": {
+		"type": "panel",
+		"anchor_from": "top_right",
+		"anchor_to": "top_right",
+		"size": [
+			"100%",
+			"100%cm + 0.5px"
+		],
+		"controls": [
+			{
+				"test@hud.test": {}
+			}
+		]
+	},
+	"test": {
+		"type": "image",
+		"anchor_to": "top_right",
+		"anchor_from": "top_right",
+		"texture": "textures/ui/toast/style_dark",
+		"size": [
+			"100%c + 30px",
+			"95%c - 10px"
+		],
+		"offset": "@hud.test_anim",
+		"layer": 998,
+		"bindings": [
+			{
+				"binding_name": "#text"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(('%.6s' * #text) = 'toast.')",
+				"target_property_name": "#visible"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(#text - 'toast.')",
+				"target_property_name": "#text_remainder"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "(('%.200s' * #text_remainder) - '$')",
+				"target_property_name": "#adv_text"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "((#text_remainder - '$') - #adv_text)",
+				"target_property_name": "#adv_icon"
+			}
+		],
+		"controls": [
+			{
+				"text": {
+					"type": "label",
+					"layer": 999,
+					"text": "#text",
+					"anchor_to": "left_middle",
+					"anchor_from": "left_middle",
+					"offset": [
+						"32px",
+						"-1%"
+					],
+					"localize": false,
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "test",
+							"source_property_name": "#adv_text",
+							"target_property_name": "#text",
+							"resolve_sibling_scope": true
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "(not (#text = ''))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"icon": {
+					"type": "image",
+					"layer": 1000,
+					"size": [
+						"20px",
+						"20px"
+					],
+					"anchor_from": "left_middle",
+					"anchor_to": "left_middle",
+					"offset": [
+						"4px",
+						"0%"
+					],
+					"keep_ratio": true,
+					"texture": "#texture",
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "test",
+							"source_property_name": "#adv_icon",
+							"target_property_name": "#texture",
+							"resolve_sibling_scope": true
+						},
+						{
+							"binding_type": "view",
+							"binding_condition": "once",
+							"source_property_name": "(not (#texture = ''))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			}
+		]
+	},
+	"test_anim": {
+		"anim_type": "offset",
+		"easing": "out_sine",
+		"next": "@hud.test_anim2",
+		"from": [
+			"100%c + 40px",
+			"20px"
+		],
+		"to": [
+			"0%",
+			"20px"
+		],
+		"duration": 1
+	},
+	"test_anim2": {
+		"anim_type": "wait",
+		"next": "@hud.test_anim3",
+		"duration": 4
+	},
+	"test_anim3": {
+		"anim_type": "offset",
+		"easing": "in_sine",
+		"from": [
+			"0%",
+			"20px"
+		],
+		"to": [
+			"100%c + 40px",
+			"20px"
+		],
+		"duration": 1,
+		"destroy_at_end": "chat_grid_item"
+	},
+	"test_factory": {
+		"type": "stack_panel",
+		"size": [
+			"100%",
+			"100%"
+		],
+		"factory": {
+			"name": "chat_item_factory",
+			"control_ids": {
+				"chat_item": "test_panel@hud.test_panel"
+			}
+		}
+	},
+	"root_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [
+					{
+						"test_factory@hud.test_factory": {}
+					}
+				]
+			}
+		]
+	},
+	"chat_grid_item/chat_background": {
+		"bindings": [
+			{
+				"binding_type": "view",
+				"source_property_name": "(('§␛' + #text + '§r') - ('§␛' + 'toast.') = ('§␛' + #text + '§r'))",
+				"target_property_name": "#visible"
+			}
+		]
+	}
+}

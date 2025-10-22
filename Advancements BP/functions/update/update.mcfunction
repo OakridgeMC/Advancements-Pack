@@ -1,0 +1,1 @@
+execute as @a[tag=!adv:update_2.5.0] run function update/2.5.0

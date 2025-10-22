@@ -1,0 +1,36 @@
+import {
+  world
+} from "@minecraft/server";
+
+const allScores = [
+  'ow_x',
+  'ow_z',
+  'levitation_start',
+  'AdvancementCount',
+  'MinecraftCount',
+  'NetherCount',
+  'EndCount',
+  'AdventureCount',
+  'HusbandryCount',
+  'AdvancementCount',
+];
+
+world.afterEvents.worldLoad.subscribe(e => {
+
+  for (const score of allScores) {
+    if (!world.scoreboard.getObjective(score)) {
+      world.scoreboard.addObjective(score)
+    }
+  }
+});
+
+world.afterEvents.playerSpawn.subscribe(e => {
+  const initialSpawn = e.initialSpawn;
+  if (initialSpawn == false) return;
+  for (const score of allScores) {
+    world.scoreboard.getObjective(score).addScore(e.player, 0);
+
+
+  }
+});
+
