@@ -43,7 +43,25 @@ const foodTypeId = [
   'minecraft:spider_eye',
   'minecraft:suspicious_stew',
   'minecraft:sweet_berries',
-  'minecraft:tropical_fish'
+  'minecraft:tropical_fish',
+  'oakridge:meal',
+  'oakridge:miners_stew',
+  'oakridge:sweet_berry_pie',
+  'oakridge:chorus_pie',
+  'oakridge:apple_pie',
+  'oakridge:golden_apple_pie',
+  'oakridge:notch_apple_pie',
+  'oakridge:cinnamon_roll',
+  'oakridge:blazing_kebab',
+  'oakridge:mincemeat_pie',
+  'oakridge:puffer_cookie',
+  'oakridge:sandwich_beef',
+  'oakridge:sandwich_chicken',
+  'oakridge:sandwich_fish',
+  'oakridge:sandwich_mutton',
+  'oakridge:sandwich_pork',
+  'oakridge:sandwich_rabbit',
+  'oakridge:sandwich_salmon'
 ];
 
 world.afterEvents.itemCompleteUse.subscribe((event) => {
@@ -57,7 +75,7 @@ world.afterEvents.itemCompleteUse.subscribe((event) => {
     return;
   }
 
-  var tag = item.typeId.replace('minecraft:', '');
+  let tag = item.typeId.split(':').pop() ?? '';
   tag = tag[0].toUpperCase() + tag.substring(1);
 
   player.addTag(`Ate_${tag}`);
