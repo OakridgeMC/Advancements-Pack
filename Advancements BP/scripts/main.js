@@ -5,6 +5,9 @@ import "./book/pageAdventure.js";
 import "./book/pageHusbandry.js";
 import "./book/pageAchievements.js";
 
+import "./book/subpacks/pageDungeons.js";
+import "./book/subpacks/pageDragons.js";
+
 import "./toast.js";
 import "./book.js";
 import "./worldInitialise.js";
@@ -72,3 +75,12 @@ import "./achievements/timber.js";
 import "./achievements/happyGhast.js";
 import "./achievements/smartStorage.js";
 import "./achievements/scrapeGolem.js";
+
+
+
+import "./subpacks/dungeons/bossKill.js";
+
+import "./subpacks/dragons/bossKill.js";
+import "./subpacks/dragons/dragonArmour.js";
+import "./subpacks/dragons/dragonEgg.js";
+import "./subpacks/dragons/inventory.js";

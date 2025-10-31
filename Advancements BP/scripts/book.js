@@ -12,6 +12,8 @@ import { open_category_end } from "./book/pageEnd.js";
 import { open_category_adventure } from "./book/pageAdventure.js";
 import { open_category_husbandry } from "./book/pageHusbandry.js";
 import { open_category_achievements } from "./book/pageAchievements.js";
+import { open_category_dungeons } from "./book/subpacks/pageDungeons.js";
+import { open_category_dragons } from "./book/subpacks/pageDragons.js";
 function getColour(pct) {
   var colour = ""
   if (pct <= 0) { colour = "§m" }
@@ -44,6 +46,9 @@ world.afterEvents.itemUse.subscribe(event => {
     let husbandryCount = world.scoreboard.getObjective('HusbandryCount').getScore(event.source)
     let achievementCount = world.scoreboard.getObjective('AchievementCount').getScore(event.source)
 
+    let dungeonsCount = world.scoreboard.getObjective('DungeonsCount').getScore(event.source)
+    let dragonsCount = world.scoreboard.getObjective('DragonsCount').getScore(event.source)
+
     let minecraftMax = 15
     let netherMax = 19
     let endMax = 7
@@ -53,6 +58,8 @@ world.afterEvents.itemUse.subscribe(event => {
 
     let advancementMax = (minecraftMax + netherMax + endMax + adventureMax + husbandryMax + achievementMax)
 
+    let dungeonsMax = 11
+    let dragonsMax = 7
 
     let advancementPct = (Math.round((advancementCount / advancementMax) * 1000)) / 10
     let minecraftPct = Math.round((minecraftCount / minecraftMax) * 100)
@@ -62,6 +69,9 @@ world.afterEvents.itemUse.subscribe(event => {
     let husbandryPct = Math.round((husbandryCount / husbandryMax) * 100)
     let achievementPct = Math.round((achievementCount / achievementMax) * 100)
 
+    let dungeonsPct = Math.round((dungeonsCount / dungeonsMax) * 100)
+    let dragonsPct = Math.round((dragonsCount / dragonsMax) * 100)
+
 
 
     let minecraftColour = getColour(minecraftPct)
@@ -70,6 +80,8 @@ world.afterEvents.itemUse.subscribe(event => {
     let adventureColour = getColour(adventurePct)
     let husbandryColour = getColour(husbandryPct)
     let achievementColour = getColour(achievementPct)
+    let dungeonsColour = getColour(dungeonsPct)
+    let dragonsColour = getColour(dragonsPct)
 
     var buttonRoutes = ["Minecraft", "Nether", "End", "Adventure", "Husbandry", "Achievements"]
 
@@ -89,6 +101,16 @@ world.afterEvents.itemUse.subscribe(event => {
     advancements.button(`Husbandry  -  ${husbandryColour}${husbandryPct}%%`, "textures/icons/category/husbandry.png");
 
     advancements.button(`Achievements  -  ${achievementColour}${achievementPct}%%`, "textures/icons/category/achievements.png");
+
+    if (event.source.hasTag('aly:dungeons_enabled')) {
+      advancements.button(`§vAlylica's Dungeons§r  -  ${dungeonsColour}${dungeonsPct}%%`, "textures/icons/category/subpacks/dungeons.png");
+      buttonRoutes.push("Dungeons")
+    }
+
+    if (event.source.hasTag('aly:dragons_enabled')) {
+      advancements.button(`§uAlylica's Dragons§r  -  ${dragonsColour}${dragonsPct}%%`, "textures/icons/category/subpacks/dragons.png");
+      buttonRoutes.push("Dragons")
+    }
 
     advancements.show(event.source).then(r => {
 
@@ -117,6 +139,14 @@ world.afterEvents.itemUse.subscribe(event => {
 
         case "Achievements":
           open_category_achievements(event.source, achievementCount, achievementMax, achievementPct)
+          break;
+
+        case "Dungeons":
+          open_category_dungeons(event.source, dungeonsCount, dungeonsMax, dungeonsPct)
+          break;
+
+        case "Dragons":
+          open_category_dragons(event.source, dragonsCount, dragonsMax, dragonsPct)
           break;
 
         default:

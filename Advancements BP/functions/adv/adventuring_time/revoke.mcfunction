@@ -36,7 +36,6 @@ tag @s remove Ocean
 tag @s remove OldGrowthBirchForest
 tag @s remove OldGrowthPineTaiga
 tag @s remove OldGrowthSpruceTaiga
-tag @s remove PaleGarden
 tag @s remove Plains
 tag @s remove River
 tag @s remove Savanna

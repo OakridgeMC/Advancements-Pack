@@ -1,42 +1,61 @@
 {
-  "format_version": 2,
-  "header": {
-    "description": "Advancements Pack by Alylica, Edited by AvgZing with custom advancements for use on the Oakridge: Survival Unhinged realm.",
-    "name": "AvgZing-Oakridge Advancements Pack RP §8(1.0.0)",
-    "uuid": "62f90bdc-9576-4b3d-8876-58203a7609c3",
-    "version": [1, 0, 0],
-    "min_engine_version": [1, 21, 50]
-  },
-  "modules": [
-    {
-      "description": "Advancements Pack by Alylica, Edited by AvgZing with custom advancements for use on the Oakridge: Survival Unhinged realm.",
-      "type": "data",
-      "uuid": "7675947e-48ee-48db-8287-1092cce5a247",
-      "version": [1, 0, 0]
+    "format_version": 2,
+    "header": {
+        "name": "§6[§b2.8.1 B§6] §dAlylica's §bAdvancements",
+        "description": "§uAdds advancements that replicate those seen on Minecraft Java Edition!\n§6Made By : §dAlylica",
+        "uuid": "b2d3458c-ed2c-40b3-bedd-83dbd03d1487",
+        "version": [
+            2,
+            8,
+            1
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            50
+        ]
     },
-    {
-      "type": "script",
-      "language": "javascript",
-      "uuid": "177aa5e7-1c0a-4429-9716-afaa775fe1b5",
-      "version": [1, 0, 0],
-      "entry": "scripts/main.js"
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "eb868c75-73a1-4241-a394-3c0ff896d6b1",
+            "version": [
+                2,
+                8,
+                1
+            ]
+        },
+        {
+            "uuid": "c0bc5909-cfb7-49b3-9338-8f19dd3d76b3",
+            "version": [
+                2,
+                8,
+                1
+            ],
+            "type": "script",
+            "language": "javascript",
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "883172a3-6049-4c62-8d26-fc17395b1095",
+            "version": [
+                2,
+                8,
+                1
+            ]
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.1.0"
+        }
+    ],
+    "metadata": {
+        "product_type": "addon"
     }
-  ],
-  "dependencies": [
-    {
-      "uuid": "c143090b-989c-408c-8ce2-7880bcb50370",
-      "version": [1, 0, 0]
-    },
-    {
-      "module_name": "@minecraft/server-ui",
-      "version": "2.0.0"
-    },
-    {
-      "module_name": "@minecraft/server",
-      "version": "2.1.0"
-    }
-  ],
-  "metadata": {
-    "product_type": "addon"
-  }
 }

@@ -13,6 +13,9 @@ const allScores = [
   'AdventureCount',
   'HusbandryCount',
   'AdvancementCount',
+
+  'DungeonsCount',
+  'DragonsCount'
 ];
 
 world.afterEvents.worldLoad.subscribe(e => {
@@ -32,5 +35,8 @@ world.afterEvents.playerSpawn.subscribe(e => {
 
 
   }
+
+  e.player.removeTag('aly:dungeons_enabled');
+  e.player.removeTag('aly:dragons_enabled');
 });
 

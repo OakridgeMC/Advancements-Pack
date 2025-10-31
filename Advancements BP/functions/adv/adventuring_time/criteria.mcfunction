@@ -31,7 +31,6 @@ tag @s add Ocean
 tag @s add OldGrowthBirchForest
 tag @s add OldGrowthPineTaiga
 tag @s add OldGrowthSpruceTaiga
-tag @s add PaleGarden
 tag @s add Plains
 tag @s add River
 tag @s add Savanna
