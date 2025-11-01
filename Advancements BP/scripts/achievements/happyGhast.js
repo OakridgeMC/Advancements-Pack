@@ -1,7 +1,4 @@
-import {
-    world,
-    system
-} from "@minecraft/server";
+import { world, system } from "@minecraft/server";
 
 system.runInterval(() => {
   for (const player of world.getPlayers()) {
@@ -13,4 +10,4 @@ system.runInterval(() => {
     }
     }
   }
-});
+}, 20);

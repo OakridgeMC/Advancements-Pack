@@ -1,6 +1,5 @@
 import {
     world,
-    system,
     EntityInitializationCause
 } from "@minecraft/server";
 
@@ -75,7 +74,7 @@ function allMet(tagsToCheck, player) {
             count += 1;
         }
     }
-    world.sendMessage(`${count} / ${tagsToCheck.length}`)
+//    world.sendMessage(`${count} / ${tagsToCheck.length}`)
     if (count == tagsToCheck.length) {
         return true;
     } else {

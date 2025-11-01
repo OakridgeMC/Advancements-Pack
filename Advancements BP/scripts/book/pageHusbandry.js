@@ -160,566 +160,721 @@ function open_category_husbandry(player, count, max, pct) {
 
         let response = r.selection;
         switch (response) {
-            case 0:
-                let bestFriends = new ActionFormData();
-                bestFriends.title("Best Friends Forever");
-                bestFriends.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Tame an animal\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                bestFriends.button("Close");
-                bestFriends.show(player).then(r => {
-                    if (r.canceled) return;
+          case 0:
+            let bestFriends = new ActionFormData();
+            bestFriends.title("Best Friends Forever");
+            bestFriends.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Tame an animal\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            bestFriends.button("Close");
+            bestFriends
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let bestFriends_response = r.selection;
-                    switch (bestFriends_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 1:
-                let completeCatalogue = new ActionFormData();
-                completeCatalogue.title("A Complete Catalogue");
-                completeCatalogue.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Tame all Cat variants!\n\n§e Reward\n§r 50 experience\n\n§e Type\n§d Challenge\n\n");
-                completeCatalogue.button("Close");
-                completeCatalogue.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let completeCatalogue_response = r.selection;
-                    switch (completeCatalogue_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            case 2:
-                let wholePack = new ActionFormData();
-                wholePack.title("The Whole Pack");
-                wholePack.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Tame one of each Wolf variant\n\n§e Reward\n§r 50 experience\n\n§e Type\n§d Challenge\n\n");
-                wholePack.button("Close");
-                wholePack.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let wholePack_response = r.selection;
-                    switch (wholePack_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            case 3:
-                let parrotsBats = new ActionFormData();
-                parrotsBats.title("The Parrots and the Bats");
-                parrotsBats.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Breed two animals together\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                parrotsBats.button("Close");
-                parrotsBats.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let parrotsBats_response = r.selection;
-                    switch (parrotsBats_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            case 4:
-                let twoByTwo = new ActionFormData();
-                twoByTwo.title("Two by Two");
-                twoByTwo.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r 	Breed all the animals!\n\n§e Reward\n§r 100 experience\n\n§e Type\n§d Challenge\n\n");
-                twoByTwo.button("Close");
-                twoByTwo.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let twoByTwo_response = r.selection;
-                    switch (twoByTwo_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 5:
-                let floatGoat = new ActionFormData();
-                floatGoat.title("Whatever Floats Your Goat!");
-                floatGoat.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Get in a Boat and float with a Goat\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                floatGoat.button("Close");
-                floatGoat.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let floatGoat_response = r.selection;
-                    switch (floatGoat_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 6:
-                let beeGuest = new ActionFormData();
-                beeGuest.title("Bee Our Guest");
-                beeGuest.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Collect Honey in a bottle\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                beeGuest.button("Close");
-                beeGuest.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let beeGuest_response = r.selection;
-                    switch (beeGuest_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 7:
-                let beelocation = new ActionFormData();
-                beelocation.title("Total Beelocation");
-                beelocation.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Move a Bee Nest using Silk Touch\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                beelocation.button("Close");
-                beelocation.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let beelocation_response = r.selection;
-                    switch (beelocation_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 8:
-                let waxOn = new ActionFormData();
-                waxOn.title("Wax On");
-                waxOn.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Apply Honeycomb to a Copper block!\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                waxOn.button("Close");
-                waxOn.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let waxOn_response = r.selection;
-                    switch (waxOn_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 9:
-                let waxOff = new ActionFormData();
-                waxOff.title("Wax Off");
-                waxOff.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Scrape Wax off a Copper block!\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                waxOff.button("Close");
-                waxOff.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let waxOff_response = r.selection;
-                    switch (waxOff_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 10:
-                let glowBehold = new ActionFormData();
-                glowBehold.title("Glow and Behold!");
-                glowBehold.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Make the text of any kind of sign glow\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                glowBehold.button("Close");
-                glowBehold.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let glowBehold_response = r.selection;
-                    switch (glowBehold_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 11:
-                let fishyBusiness = new ActionFormData();
-                fishyBusiness.title("Fishy Business");
-                fishyBusiness.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Reel in a Fishing Rod\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                fishyBusiness.button("Close");
-                fishyBusiness.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let fishyBusiness_response = r.selection;
-                    switch (fishyBusiness_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 12:
-                let tacticalFishing = new ActionFormData();
-                tacticalFishing.title("Tactical Fishing");
-                tacticalFishing.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Catch a Fish... without a Fishing Rod!\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                tacticalFishing.button("Close");
-                tacticalFishing.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let tacticalFishing_response = r.selection;
-                    switch (tacticalFishing_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 13:
-                let cutestPredator = new ActionFormData();
-                cutestPredator.title("The Cutest Predator");
-                cutestPredator.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Catch an Axolotl in a Bucket\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                cutestPredator.button("Close");
-                cutestPredator.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let cutestPredator_response = r.selection;
-                    switch (cutestPredator_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 14:
-                let powerFriendship = new ActionFormData();
-                powerFriendship.title("The Healing Power of Friendship!");
-                powerFriendship.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Have the Regeneration effect applied from assisting an axolotl in killing a mob.\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                powerFriendship.button("Close");
-                powerFriendship.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let powerFriendship_response = r.selection;
-                    switch (powerFriendship_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 15:
-                let bukkitBukkit = new ActionFormData();
-                bukkitBukkit.title("Bukkit Bukkit");
-                bukkitBukkit.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Catch an Tadpole in a Bucket\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                bukkitBukkit.button("Close");
-                bukkitBukkit.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let bukkitBukkit_response = r.selection;
-                    switch (bukkitBukkit_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 16:
-                let squadHops = new ActionFormData();
-                squadHops.title("When the Squad Hops into Town");
-                squadHops.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Get each Frog variant on a Lead\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                squadHops.button("Close");
-                squadHops.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let squadHops_response = r.selection;
-                    switch (squadHops_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 17:
-                let powersCombined = new ActionFormData();
-                powersCombined.title("With Our Powers Combined!");
-                powersCombined.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Have all Froglights in your inventory\n\n§e Reward\n§r None\n\n§e Type\n§d Challenge\n\n");
-                powersCombined.button("Close");
-                powersCombined.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let powersCombined_response = r.selection;
-                    switch (powersCombined_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 18:
-                let goodNew = new ActionFormData();
-                goodNew.title("Good as New");
-                goodNew.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Repair a damaged Wolf Armour using Armadillo Scutes\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                goodNew.button("Close");
-                goodNew.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let goodNew_response = r.selection;
-                    switch (goodNew_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 19:
-                let shearBrilliance = new ActionFormData();
-                shearBrilliance.title("Shear Brilliance");
-                shearBrilliance.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Remove Wolf Armour from a Wolf using Shears\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                shearBrilliance.button("Close");
-                shearBrilliance.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let shearBrilliance_response = r.selection;
-                    switch (shearBrilliance_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 20:
-                let seedyPlace = new ActionFormData();
-                seedyPlace.title("A Seedy Place");
-                seedyPlace.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Plant a seed and watch it grow\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                seedyPlace.button("Close");
-                seedyPlace.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let seedyPlace_response = r.selection;
-                    switch (seedyPlace_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 21:
-                let balancedDiet = new ActionFormData();
-                balancedDiet.title("A Balanced Diet");
-                balancedDiet.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Eat everything that is edible (except Cake), even if it's not good for you\n\n§e Reward\n§r 100 Experience\n\n§e Type\n§d Challenge\n\n");
-                balancedDiet.button("Close");
-                balancedDiet.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let balancedDiet_response = r.selection;
-                    switch (balancedDiet_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 22:
-                let seriousDedication = new ActionFormData();
-                seriousDedication.title("Serious Dedication");
-                seriousDedication.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Use a Netherite Ingot to upgrade a Hoe, and then reevaluate your life choices\n\n§e Reward\n§r 100 Experience\n\n§e Type\n§d Challenge\n\n");
-                seriousDedication.button("Close");
-                seriousDedication.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let seriousDedication_response = r.selection;
-                    switch (seriousDedication_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 23:
-                let stayHydrated = new ActionFormData();
-                stayHydrated.title("Stay Hydrated!");
-                stayHydrated.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Place a Dried Ghast block into water\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                stayHydrated.button("Close");
-                stayHydrated.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let stayHydrated_response = r.selection;
-                    switch (stayHydrated_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 24:
-                let friendMe = new ActionFormData();
-
-                if (player.hasTag('FriendMe')) {
-                    friendMe.title("You've Got a Friend in Me");
-                    friendMe.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Exchange items with an Allay\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                    friendMe.button("Close");
-                } else {
-                    friendMe.title("???");
-                    friendMe.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n");
-                    friendMe.button("Close");
+                let bestFriends_response = r.selection;
+                switch (bestFriends_response) {
+                  default:
+                    return;
                 }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-                friendMe.show(player).then(r => {
-                    if (r.canceled) return;
+          case 1:
+            let completeCatalogue = new ActionFormData();
+            completeCatalogue.title("A Complete Catalogue");
+            completeCatalogue.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Tame all Cat variants!\n\n§e Reward\n§r 50 experience\n\n§e Type\n§d Challenge\n\n"
+            );
+            completeCatalogue.button("Close");
+            completeCatalogue
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let friendMe_response = r.selection;
-                    switch (friendMe_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            case 25:
-                let birthdaySong = new ActionFormData();
-
-                if (player.hasTag('BirthdaySong')) {
-                    birthdaySong.title("Birthday Song");
-                    birthdaySong.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Have an Allay drop a Cake at a Note Block\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                    birthdaySong.button("Close");
-                } else {
-                    birthdaySong.title("???");
-                    birthdaySong.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n");
-                    birthdaySong.button("Close");
+                let completeCatalogue_response = r.selection;
+                switch (completeCatalogue_response) {
+                  default:
+                    return;
                 }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 2:
+            let wholePack = new ActionFormData();
+            wholePack.title("The Whole Pack");
+            wholePack.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Tame one of each Wolf variant\n\n§e Reward\n§r 50 experience\n\n§e Type\n§d Challenge\n\n"
+            );
+            wholePack.button("Close");
+            wholePack
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                birthdaySong.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let birthdaySong_response = r.selection;
-                    switch (birthdaySong_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 26:
-                let smellsInteresting = new ActionFormData();
-
-                if (player.hasTag('SmellsInteresting')) {
-                    smellsInteresting.title("Smells Interesting");
-                    smellsInteresting.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Obtain a Sniffer Egg\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                    smellsInteresting.button("Close");
-                } else {
-                    smellsInteresting.title("???");
-                    smellsInteresting.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n");
-                    smellsInteresting.button("Close");
+                let wholePack_response = r.selection;
+                switch (wholePack_response) {
+                  default:
+                    return;
                 }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 3:
+            let parrotsBats = new ActionFormData();
+            parrotsBats.title("The Parrots and the Bats");
+            parrotsBats.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Breed two animals together\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            parrotsBats.button("Close");
+            parrotsBats
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                smellsInteresting.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let smellsInteresting_response = r.selection;
-                    switch (smellsInteresting_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 27:
-                let littleSniffs = new ActionFormData();
-
-                if (player.hasTag('LittleSniffs')) {
-                    littleSniffs.title("Little Sniffs");
-                    littleSniffs.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Feed a Snifflet\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                    littleSniffs.button("Close");
-                } else {
-                    littleSniffs.title("???");
-                    littleSniffs.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n");
-                    littleSniffs.button("Close");
+                let parrotsBats_response = r.selection;
+                switch (parrotsBats_response) {
+                  default:
+                    return;
                 }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 4:
+            let twoByTwo = new ActionFormData();
+            twoByTwo.title("Two by Two");
+            twoByTwo.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r 	Breed all the animals!\n\n§e Reward\n§r 100 experience\n\n§e Type\n§d Challenge\n\n"
+            );
+            twoByTwo.button("Close");
+            twoByTwo
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                littleSniffs.show(player).then(r => {
-                    if (r.canceled) return;
-
-                    let littleSniffs_response = r.selection;
-                    switch (littleSniffs_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-
-            case 28:
-                let plantingPast = new ActionFormData();
-
-                if (player.hasTag('PlantingPast')) {
-                    plantingPast.title("Planting the Past");
-                    plantingPast.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r Plant any Sniffer seed\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                    plantingPast.button("Close");
-                } else {
-                    plantingPast.title("???");
-                    plantingPast.body("§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n");
-                    plantingPast.button("Close");
+                let twoByTwo_response = r.selection;
+                switch (twoByTwo_response) {
+                  default:
+                    return;
                 }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-                plantingPast.show(player).then(r => {
-                    if (r.canceled) return;
+          case 5:
+            let floatGoat = new ActionFormData();
+            floatGoat.title("Whatever Floats Your Goat!");
+            floatGoat.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Get in a Boat and float with a Goat\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            floatGoat.button("Close");
+            floatGoat
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let plantingPast_response = r.selection;
-                    switch (plantingPast_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let floatGoat_response = r.selection;
+                switch (floatGoat_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            default:
-                return;
+          case 6:
+            let beeGuest = new ActionFormData();
+            beeGuest.title("Bee Our Guest");
+            beeGuest.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Collect Honey in a bottle\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            beeGuest.button("Close");
+            beeGuest
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let beeGuest_response = r.selection;
+                switch (beeGuest_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 7:
+            let beelocation = new ActionFormData();
+            beelocation.title("Total Beelocation");
+            beelocation.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Move a Bee Nest using Silk Touch\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            beelocation.button("Close");
+            beelocation
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let beelocation_response = r.selection;
+                switch (beelocation_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 8:
+            let waxOn = new ActionFormData();
+            waxOn.title("Wax On");
+            waxOn.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Apply Honeycomb to a Copper block!\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            waxOn.button("Close");
+            waxOn
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let waxOn_response = r.selection;
+                switch (waxOn_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 9:
+            let waxOff = new ActionFormData();
+            waxOff.title("Wax Off");
+            waxOff.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Scrape Wax off a Copper block!\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            waxOff.button("Close");
+            waxOff
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let waxOff_response = r.selection;
+                switch (waxOff_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 10:
+            let glowBehold = new ActionFormData();
+            glowBehold.title("Glow and Behold!");
+            glowBehold.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Make the text of any kind of sign glow\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            glowBehold.button("Close");
+            glowBehold
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let glowBehold_response = r.selection;
+                switch (glowBehold_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 11:
+            let fishyBusiness = new ActionFormData();
+            fishyBusiness.title("Fishy Business");
+            fishyBusiness.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Reel in a Fishing Rod\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            fishyBusiness.button("Close");
+            fishyBusiness
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let fishyBusiness_response = r.selection;
+                switch (fishyBusiness_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 12:
+            let tacticalFishing = new ActionFormData();
+            tacticalFishing.title("Tactical Fishing");
+            tacticalFishing.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Catch a Fish... without a Fishing Rod!\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            tacticalFishing.button("Close");
+            tacticalFishing
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let tacticalFishing_response = r.selection;
+                switch (tacticalFishing_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 13:
+            let cutestPredator = new ActionFormData();
+            cutestPredator.title("The Cutest Predator");
+            cutestPredator.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Catch an Axolotl in a Bucket\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            cutestPredator.button("Close");
+            cutestPredator
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let cutestPredator_response = r.selection;
+                switch (cutestPredator_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 14:
+            let powerFriendship = new ActionFormData();
+            powerFriendship.title("The Healing Power of Friendship!");
+            powerFriendship.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Have the Regeneration effect applied from assisting an axolotl in killing a mob.\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            powerFriendship.button("Close");
+            powerFriendship
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let powerFriendship_response = r.selection;
+                switch (powerFriendship_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 15:
+            let bukkitBukkit = new ActionFormData();
+            bukkitBukkit.title("Bukkit Bukkit");
+            bukkitBukkit.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Catch an Tadpole in a Bucket\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            bukkitBukkit.button("Close");
+            bukkitBukkit
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let bukkitBukkit_response = r.selection;
+                switch (bukkitBukkit_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 16:
+            let squadHops = new ActionFormData();
+            squadHops.title("When the Squad Hops into Town");
+            squadHops.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Get each Frog variant on a Lead\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            squadHops.button("Close");
+            squadHops
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let squadHops_response = r.selection;
+                switch (squadHops_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 17:
+            let powersCombined = new ActionFormData();
+            powersCombined.title("With Our Powers Combined!");
+            powersCombined.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Have all Froglights in your inventory\n\n§e Reward\n§r None\n\n§e Type\n§d Challenge\n\n"
+            );
+            powersCombined.button("Close");
+            powersCombined
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let powersCombined_response = r.selection;
+                switch (powersCombined_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 18:
+            let goodNew = new ActionFormData();
+            goodNew.title("Good as New");
+            goodNew.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Repair a damaged Wolf Armour using Armadillo Scutes\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            goodNew.button("Close");
+            goodNew
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let goodNew_response = r.selection;
+                switch (goodNew_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 19:
+            let shearBrilliance = new ActionFormData();
+            shearBrilliance.title("Shear Brilliance");
+            shearBrilliance.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Remove Wolf Armour from a Wolf using Shears\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            shearBrilliance.button("Close");
+            shearBrilliance
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let shearBrilliance_response = r.selection;
+                switch (shearBrilliance_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 20:
+            let seedyPlace = new ActionFormData();
+            seedyPlace.title("A Seedy Place");
+            seedyPlace.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Plant a seed and watch it grow\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            seedyPlace.button("Close");
+            seedyPlace
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let seedyPlace_response = r.selection;
+                switch (seedyPlace_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 21:
+            let balancedDiet = new ActionFormData();
+            balancedDiet.title("A Balanced Diet");
+            balancedDiet.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Eat everything that is edible (except Cake), even if it's not good for you\n\n§e Reward\n§r 100 Experience\n\n§e Type\n§d Challenge\n\n"
+            );
+            balancedDiet.button("Close");
+            balancedDiet
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let balancedDiet_response = r.selection;
+                switch (balancedDiet_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 22:
+            let seriousDedication = new ActionFormData();
+            seriousDedication.title("Serious Dedication");
+            seriousDedication.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Use a Netherite Ingot to upgrade a Hoe, and then reevaluate your life choices\n\n§e Reward\n§r 100 Experience\n\n§e Type\n§d Challenge\n\n"
+            );
+            seriousDedication.button("Close");
+            seriousDedication
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let seriousDedication_response = r.selection;
+                switch (seriousDedication_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 23:
+            let stayHydrated = new ActionFormData();
+            stayHydrated.title("Stay Hydrated!");
+            stayHydrated.body(
+              "§7 Category\n§r Husbandry\n\n§7 Description\n§r Place a Dried Ghast block into water\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            stayHydrated.button("Close");
+            stayHydrated
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let stayHydrated_response = r.selection;
+                switch (stayHydrated_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 24:
+            let friendMe = new ActionFormData();
+
+            if (player.hasTag("FriendMe")) {
+              friendMe.title("You've Got a Friend in Me");
+              friendMe.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r Exchange items with an Allay\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+              );
+              friendMe.button("Close");
+            } else {
+              friendMe.title("???");
+              friendMe.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n"
+              );
+              friendMe.button("Close");
+            }
+
+            friendMe
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let friendMe_response = r.selection;
+                switch (friendMe_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 25:
+            let birthdaySong = new ActionFormData();
+
+            if (player.hasTag("BirthdaySong")) {
+              birthdaySong.title("Birthday Song");
+              birthdaySong.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r Have an Allay drop a Cake at a Note Block\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+              );
+              birthdaySong.button("Close");
+            } else {
+              birthdaySong.title("???");
+              birthdaySong.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n"
+              );
+              birthdaySong.button("Close");
+            }
+
+            birthdaySong
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let birthdaySong_response = r.selection;
+                switch (birthdaySong_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 26:
+            let smellsInteresting = new ActionFormData();
+
+            if (player.hasTag("SmellsInteresting")) {
+              smellsInteresting.title("Smells Interesting");
+              smellsInteresting.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r Obtain a Sniffer Egg\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+              );
+              smellsInteresting.button("Close");
+            } else {
+              smellsInteresting.title("???");
+              smellsInteresting.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n"
+              );
+              smellsInteresting.button("Close");
+            }
+
+            smellsInteresting
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let smellsInteresting_response = r.selection;
+                switch (smellsInteresting_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 27:
+            let littleSniffs = new ActionFormData();
+
+            if (player.hasTag("LittleSniffs")) {
+              littleSniffs.title("Little Sniffs");
+              littleSniffs.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r Feed a Snifflet\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+              );
+              littleSniffs.button("Close");
+            } else {
+              littleSniffs.title("???");
+              littleSniffs.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n"
+              );
+              littleSniffs.button("Close");
+            }
+
+            littleSniffs
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let littleSniffs_response = r.selection;
+                switch (littleSniffs_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 28:
+            let plantingPast = new ActionFormData();
+
+            if (player.hasTag("PlantingPast")) {
+              plantingPast.title("Planting the Past");
+              plantingPast.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r Plant any Sniffer seed\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+              );
+              plantingPast.button("Close");
+            } else {
+              plantingPast.title("???");
+              plantingPast.body(
+                "§7 Category\n§r Husbandry\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n"
+              );
+              plantingPast.button("Close");
+            }
+
+            plantingPast
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let plantingPast_response = r.selection;
+                switch (plantingPast_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          default:
+            return;
         }
         // end of switch
     }).catch(e => {

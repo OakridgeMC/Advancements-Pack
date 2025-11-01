@@ -92,277 +92,534 @@ function open_category_achievements(player, count, max, pct) {
     } else {
         achievements.button("No Man Left Behind", "textures/icons/advancement/incomplete/no_man_left_behind.png");
     }
+  if (player.hasTag("SpawningSpawners")) {
+    achievements.button(
+      "§aSpawning Spawners",
+      "textures/icons/advancement/spawning_spawners.png"
+    );
+  } else {
+    achievements.button(
+      "Spawning Spawners",
+      "textures/icons/advancement/incomplete/spawning_spawners.png"
+    );
+  }
+    if (player.hasTag("ChefsBliss")) {
+      achievements.button(
+        "§aChef's Bliss",
+        "textures/icons/advancement/chefs_bliss.png"
+      );
+    } else {
+      achievements.button(
+        "Chef's Bliss",
+        "textures/icons/advancement/incomplete/chefs_bliss.png"
+      );
+    }
+    if (player.hasTag("BadBones")) {
+      achievements.button(
+        "§aThat's Bad For Your Bones!",
+        "textures/icons/advancement/bad_bones.png"
+      );
+    } else {
+      achievements.button(
+        "That's Bad For Your Bones!",
+        "textures/icons/advancement/incomplete/bad_bones.png"
+      );
+    }
+    if (player.hasTag("WhimAway")) {
+      achievements.button(
+        "§aA Whim Away",
+        "textures/icons/advancement/whim_away.png"
+      );
+    } else {
+      achievements.button(
+        "A Whim Away",
+        "textures/icons/advancement/incomplete/whim_away.png"
+      );
+    }
+    if (player.hasTag("LowRider")) {
+      achievements.button(
+        "§aLow Rider",
+        "textures/icons/advancement/low_rider.png"
+      );
+    } else {
+      achievements.button(
+        "Low Rider",
+        "textures/icons/advancement/incomplete/low_rider.png"
+      );
+    }
+
+
+
     achievements.show(player).then(r => {
         if (r.canceled) return;
 
         let response = r.selection;
         switch (response) {
-            case 0:
-                let magicHappens = new ActionFormData();
-                magicHappens.title("Where the Magic Happens");
-                magicHappens.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Obtain the fabled Book of Advancements\n\n§e Reward\n§r 50 Experience\n\n§e Type\n§d Challenge\n\n");
-                magicHappens.button("Close");
-                magicHappens.show(player).then(r => {
-                    if (r.canceled) return;
+          case 0:
+            let magicHappens = new ActionFormData();
+            magicHappens.title("Where the Magic Happens");
+            magicHappens.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Obtain the fabled Book of Advancements\n\n§e Reward\n§r 50 Experience\n\n§e Type\n§d Challenge\n\n"
+            );
+            magicHappens.button("Close");
+            magicHappens
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let magicHappens_response = r.selection;
-                    switch (magicHappens_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let magicHappens_response = r.selection;
+                switch (magicHappens_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            case 1:
-                let runLife = new ActionFormData();
-                runLife.title("Run for Your Life!!!");
-                runLife.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Awaken the Warden... and then RUN!\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                runLife.button("Close");
-                runLife.show(player).then(r => {
-                    if (r.canceled) return;
+          case 1:
+            let runLife = new ActionFormData();
+            runLife.title("Run for Your Life!!!");
+            runLife.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Awaken the Warden... and then RUN!\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            runLife.button("Close");
+            runLife
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let runLife_response = r.selection;
-                    switch (runLife_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let runLife_response = r.selection;
+                switch (runLife_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            case 2:
-                let backCame = new ActionFormData();
-                backCame.title("Back from Whence You Came!");
-                backCame.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Defeat the Warden\n\n§e Reward\n§r 250 Experience\n\n§e Type\n§d Challenge\n\n");
-                backCame.button("Close");
-                backCame.show(player).then(r => {
-                    if (r.canceled) return;
+          case 2:
+            let backCame = new ActionFormData();
+            backCame.title("Back from Whence You Came!");
+            backCame.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Defeat the Warden\n\n§e Reward\n§r 250 Experience\n\n§e Type\n§d Challenge\n\n"
+            );
+            backCame.button("Close");
+            backCame
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let backCame_response = r.selection;
-                    switch (backCame_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let backCame_response = r.selection;
+                switch (backCame_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            case 3:
-                let wildWorld = new ActionFormData();
-                wildWorld.title("A Wild World");
-                wildWorld.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Hold all unique saplings at once\n\n§e Reward\n§r None\n\n§e Type\n§e Goal\n\n");
-                wildWorld.button("Close");
-                wildWorld.show(player).then(r => {
-                    if (r.canceled) return;
+          case 3:
+            let wildWorld = new ActionFormData();
+            wildWorld.title("A Wild World");
+            wildWorld.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Hold all unique saplings at once\n\n§e Reward\n§r None\n\n§e Type\n§e Goal\n\n"
+            );
+            wildWorld.button("Close");
+            wildWorld
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let wildWorld_response = r.selection;
-                    switch (wildWorld_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let wildWorld_response = r.selection;
+                switch (wildWorld_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            case 4:
-                let fruitLoom = new ActionFormData();
-                fruitLoom.title("Fruit on the Loom");
-                fruitLoom.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Create the \'Thing\' Banner Pattern using an Enchanted Apple\n\n§e Reward\n§r None\n\n§e Type\n§e Goal\n\n");
-                fruitLoom.button("Close");
-                fruitLoom.show(player).then(r => {
-                    if (r.canceled) return;
+          case 4:
+            let fruitLoom = new ActionFormData();
+            fruitLoom.title("Fruit on the Loom");
+            fruitLoom.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Create the 'Thing' Banner Pattern using an Enchanted Apple\n\n§e Reward\n§r None\n\n§e Type\n§e Goal\n\n"
+            );
+            fruitLoom.button("Close");
+            fruitLoom
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let fruitLoom_response = r.selection;
-                    switch (fruitLoom_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let fruitLoom_response = r.selection;
+                switch (fruitLoom_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            case 5:
-                let deepEnd = new ActionFormData();
-                deepEnd.title("The Deep End");
-                deepEnd.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Defeat an Elder Guardian\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                deepEnd.button("Close");
-                deepEnd.show(player).then(r => {
-                    if (r.canceled) return;
+          case 5:
+            let deepEnd = new ActionFormData();
+            deepEnd.title("The Deep End");
+            deepEnd.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Defeat an Elder Guardian\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            deepEnd.button("Close");
+            deepEnd
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let deepEnd_response = r.selection;
-                    switch (deepEnd_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            case 6:
-                let recordBreaker = new ActionFormData();
-                recordBreaker.title("Record Breaker");
-                recordBreaker.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Take a listen to Disc 11\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                recordBreaker.button("Close");
-                recordBreaker.show(player).then(r => {
-                    if (r.canceled) return;
+                let deepEnd_response = r.selection;
+                switch (deepEnd_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 6:
+            let recordBreaker = new ActionFormData();
+            recordBreaker.title("Record Breaker");
+            recordBreaker.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Take a listen to Disc 11\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            recordBreaker.button("Close");
+            recordBreaker
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let recordBreaker_response = r.selection;
-                    switch (recordBreaker_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let recordBreaker_response = r.selection;
+                switch (recordBreaker_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            case 7:
-                let gardenAwakens = new ActionFormData();
-                gardenAwakens.title("The Garden Awakens..");
-                gardenAwakens.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Enter a Pale Garden and beware what lurks inside\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                gardenAwakens.button("Close");
-                gardenAwakens.show(player).then(r => {
-                    if (r.canceled) return;
+          case 7:
+            let gardenAwakens = new ActionFormData();
+            gardenAwakens.title("The Garden Awakens..");
+            gardenAwakens.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Enter a Pale Garden and beware what lurks inside\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            gardenAwakens.button("Close");
+            gardenAwakens
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let gardenAwakens_response = r.selection;
-                    switch (gardenAwakens_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let gardenAwakens_response = r.selection;
+                switch (gardenAwakens_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            case 8:
-                let itTree = new ActionFormData();
-                itTree.title("Is It a... Tree?");
-                itTree.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Look at a Creaking through a Spyglass... and maybe dont look away after\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                itTree.button("Close");
-                itTree.show(player).then(r => {
-                    if (r.canceled) return;
+          case 8:
+            let itTree = new ActionFormData();
+            itTree.title("Is It a... Tree?");
+            itTree.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Look at a Creaking through a Spyglass... and maybe don't look away after, or else\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            itTree.button("Close");
+            itTree
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let itTree_response = r.selection;
-                    switch (itTree_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let itTree_response = r.selection;
+                switch (itTree_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            case 9:
-                let timber = new ActionFormData();
-                timber.title("Timber!!!");
-                timber.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Destroy a natural Creaking Heart\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                timber.button("Close");
-                timber.show(player).then(r => {
-                    if (r.canceled) return;
+          case 9:
+            let timber = new ActionFormData();
+            timber.title("Timber!!!");
+            timber.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Destroy a natural Creaking Heart\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            timber.button("Close");
+            timber
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let timber_response = r.selection;
-                    switch (timber_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            case 10:
-                let pureHeart = new ActionFormData();
-                pureHeart.title("Pure of Heart");
-                pureHeart.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Collect the resin of a Creaking Heart\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                pureHeart.button("Close");
-                pureHeart.show(player).then(r => {
-                    if (r.canceled) return;
+                let timber_response = r.selection;
+                switch (timber_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 10:
+            let pureHeart = new ActionFormData();
+            pureHeart.title("Pure of Heart");
+            pureHeart.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Collect the resin of a Creaking Heart\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            pureHeart.button("Close");
+            pureHeart
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let pureHeart_response = r.selection;
-                    switch (pureHeart_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            case 11:
-                let speakTrees = new ActionFormData();
-                speakTrees.title("I Speak for the Trees");
-                speakTrees.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Obtain a Creaking Heart\n\n§e Reward\n§r 50 Experience\n\n§e Type\n§d Challenge\n\n");
-                speakTrees.button("Close");
-                speakTrees.show(player).then(r => {
-                    if (r.canceled) return;
+                let pureHeart_response = r.selection;
+                switch (pureHeart_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 11:
+            let speakTrees = new ActionFormData();
+            speakTrees.title("I Speak for the Trees");
+            speakTrees.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Obtain a Creaking Heart\n\n§e Reward\n§r 50 Experience\n\n§e Type\n§d Challenge\n\n"
+            );
+            speakTrees.button("Close");
+            speakTrees
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let speakTrees_response = r.selection;
-                    switch (speakTrees_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            case 12:
-                let howWeather = new ActionFormData();
-                howWeather.title("How's the Weather up There?");
-                howWeather.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Take a Happy Ghast up into the clouds to heal it\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                howWeather.button("Close");
-                howWeather.show(player).then(r => {
-                    if (r.canceled) return;
+                let speakTrees_response = r.selection;
+                switch (speakTrees_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 12:
+            let howWeather = new ActionFormData();
+            howWeather.title("How's the Weather up There?");
+            howWeather.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Take a Happy Ghast up into the clouds to heal it\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            howWeather.button("Close");
+            howWeather
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let howWeather_response = r.selection;
-                    switch (howWeather_response) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            case 13:
-                let smartStorage = new ActionFormData();
-                smartStorage.title("Smart Storage");
-                smartStorage.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Have a Copper Golem help organise a chest.\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n");
-                smartStorage.button("Close");
-                smartStorage.show(player).then(r => {
-                    if (r.canceled) return;
+                let howWeather_response = r.selection;
+                switch (howWeather_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 13:
+            let smartStorage = new ActionFormData();
+            smartStorage.title("Smart Storage");
+            smartStorage.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Have a Copper Golem help organise a chest.\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            smartStorage.button("Close");
+            smartStorage
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let smartStorage_r = r.selection;
-                    switch (smartStorage_r) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
+                let smartStorage_r = r.selection;
+                switch (smartStorage_r) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
 
-            case 14:
-                let noMan = new ActionFormData();
-                noMan.title("No Man Left Behind");
-                noMan.body("§7 Category\n§r Achievements\n\n§7 Description\n§r Revive a Copper Golem that had became a statue\n\n§e Reward\n§r None\n\n§e Type\n§e Goal\n\n");
-                noMan.button("Close");
-                noMan.show(player).then(r => {
-                    if (r.canceled) return;
+          case 14:
+            let noMan = new ActionFormData();
+            noMan.title("No Man Left Behind");
+            noMan.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Revive a Copper Golem that had became a statue\n\n§e Reward\n§r None\n\n§e Type\n§e Goal\n\n"
+            );
+            noMan.button("Close");
+            noMan
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
 
-                    let noMan_r = r.selection;
-                    switch (noMan_r) {
-                        default:
-                            return;
-                    }
-                }).catch(e => {
-                    console.error(e, e.stack);
-                });
-                break;
-            default:
-                return;
+                let noMan_r = r.selection;
+                switch (noMan_r) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          case 15:
+            let spawningspawners = new ActionFormData();
+            spawningspawners.title("Spawning Spawners");
+            spawningspawners.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Place your first custom mob spawner\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            spawningspawners.button("Close");
+            spawningspawners
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let spawningspawners_response = r.selection;
+                switch (spawningspawners_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 16:
+            let chefsBliss = new ActionFormData();
+            chefsBliss.title("Chef's Bliss");
+            chefsBliss.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Hold all of the custom Oakridge foods in your inventory at once\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            chefsBliss.button("Close");
+            chefsBliss
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let chefsBliss_response = r.selection;
+                switch (chefsBliss_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 17:
+            let badBones = new ActionFormData();
+
+            if (player.hasTag("BadBones")) {
+              badBones.title("That's Bad For Your Bones!");
+              badBones.body(
+                "§7 Category\n§r Achievements\n\n§7 Description\n§r You went splat! Die from fall damage\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+              );
+              badBones.button("Close");
+            } else {
+              badBones.title("???");
+              badBones.body(
+                "§7 Category\n§r Achievements\n\n§7 Description\n§r This advancement is a secret, its info is only revealed after completion.\n"
+              );
+              badBones.button("Close");
+            }
+
+            badBones
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let badBones_r = r.selection;
+                switch (badBones_r) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 18:
+            let whimAway = new ActionFormData();
+            whimAway.title("A Whim Away");
+            whimAway.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r This advancement is granted at the whim of another player whom you entertain\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            whimAway.button("Close");
+            whimAway
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let whimAway_response = r.selection;
+                switch (whimAway_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+
+          case 19:
+            let lowRider = new ActionFormData();
+            lowRider.title("Low Rider");
+            lowRider.body(
+              "§7 Category\n§r Achievements\n\n§7 Description\n§r Ride a mob in the void of the End (below y=0)... and don't die! Or do.\n\n§e Reward\n§r None\n\n§e Type\n§a Advancement\n\n"
+            );
+            lowRider.button("Close");
+            lowRider
+              .show(player)
+              .then((r) => {
+                if (r.canceled) return;
+
+                let lowRider_response = r.selection;
+                switch (lowRider_response) {
+                  default:
+                    return;
+                }
+              })
+              .catch((e) => {
+                console.error(e, e.stack);
+              });
+            break;
+          default:
+            return;
         }
         // end of switch
     }).catch(e => {

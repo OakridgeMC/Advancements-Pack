@@ -49,7 +49,7 @@ world.afterEvents.itemUse.subscribe(event => {
     let endMax = 7
     let adventureMax = 38
     let husbandryMax = 29
-    let achievementMax = 14
+    let achievementMax = 20
 
     let advancementMax = (minecraftMax + netherMax + endMax + adventureMax + husbandryMax + achievementMax)
 

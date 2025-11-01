@@ -85,3 +85,4 @@ execute as @a[tag=!WildWorld,hasitem=[{item=oak_sapling},{item=spruce_sapling},{
 execute as @a[tag=!FruitLoom,hasitem={item=mojang_banner_pattern}] run function adv/fruit_on_the_loom/grant
 execute as @a[tag=!SpeakTrees,hasitem={item=creaking_heart}] run function adv/i_speak_for_the_trees/grant
 execute as @a[tag=!PureHeart,hasitem={item=resin_clump}] run function adv/pure_of_heart/grant
+execute as @a[tag=!ChefsBliss,hasitem=[{item=oakridge:apple_pie},{item=oakridge:blazing_kebab},{item=oakridge:chorus_pie},{item=oakridge:cinnamon_roll},{item=oakridge:golden_apple_pie},{item=oakridge:meal},{item=oakridge:miners_stew},{item=oakridge:notch_apple_pie},{item=oakridge:sandwich_beef},{item=oakridge:sandwich_chicken},{item=oakridge:sandwich_fish},{item=oakridge:sandwich_mutton},{item=oakridge:sandwich_pork},{item=oakridge:sandwich_rabbit},{item=oakridge:sandwich_salmon},{item=oakridge:sweet_berry_pie}]] run function adv/chefs_bliss/grant

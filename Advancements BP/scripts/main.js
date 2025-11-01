@@ -72,3 +72,7 @@ import "./achievements/timber.js";
 import "./achievements/happyGhast.js";
 import "./achievements/smartStorage.js";
 import "./achievements/scrapeGolem.js";
+import "./achievements/badBones.js";
+import "./achievements/lowRider.js";
+import "./achievements/spawningspawners.js";
+
