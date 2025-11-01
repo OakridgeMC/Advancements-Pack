@@ -10,8 +10,8 @@ world.afterEvents.playerPlaceBlock.subscribe((event) => {
 
   if (
     block.typeId === "minecraft:mob_spawner" &&
-    !player.hasTag("SpawningSpawners") &&
-    block.isWaterlogged
-  )
+    !player.hasTag("SpawningSpawners")
+  ) {
     player.runCommand("function adv/spawning_spawners/grant");
+  }
 });

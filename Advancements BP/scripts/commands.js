@@ -1,4 +1,9 @@
-import { world, system, CommandPermissionLevel, CustomCommandStatus, PlayerSelector } from "@minecraft/server";
+import {
+  world,
+  system,
+  CommandPermissionLevel,
+  CustomCommandStatus,
+} from "@minecraft/server";
 
 system.beforeEvents.startup.subscribe((event) => {
   const registry = event.customCommandRegistry;
@@ -29,26 +34,32 @@ system.beforeEvents.startup.subscribe((event) => {
       mandatoryParameters: [
         {
           name: "adv:WhimPlayer",
-          type: PlayerSelector,
+          type: "PlayerSelector",
         },
       ],
     },
     (origin, WhimPlayer) => {
-      if (origin.initiator == WhimPlayer) {
+      if (origin.sourceEntity.name == WhimPlayer[0].name) {
         return {
           status: CustomCommandStatus.Failure,
           message: "You cannot grant this to yourself.",
         };
       }
+      if (WhimPlayer[0].hasTag("WhimAway")) {
+        return {
+          status: CustomCommandStatus.Failure,
+          message: "That player already has the advancement!",
+        };
+      }
       system.run(() => {
         world.sendMessage(
-          `${origin.initiator.name} has granted §aA Whim Away§r to ${WhimPlayer.name}!`
+          `${origin.sourceEntity.name} has granted §aA Whim Away§r to ${WhimPlayer[0].name}!`
         );
-        WhimPlayer.runCommand("function adv/whim_away/grant");
+        WhimPlayer[0].runCommand("function adv/whim_away/grant");
       });
       return {
         status: CustomCommandStatus.Success,
-        message: `Achievement granted to ${WhimPlayer.name}.`,
+        message: `Advancement granted to ${WhimPlayer[0].name}.`,
       };
     }
   );

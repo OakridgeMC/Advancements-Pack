@@ -2,30 +2,30 @@
   "format_version": 2,
   "header": {
     "description": "Advancements Pack by Alylica, Edited by AvgZing with custom advancements for use on the Oakridge: Survival Unhinged realm.",
-    "name": "AvgZing-Oakridge Advancements Pack RP §8(1.0.0)",
-    "uuid": "62f90bdc-9576-4b3d-8876-58203a7609c3",
-    "version": [1, 0, 0],
+    "name": "AvgZing-Oakridge Advancements Pack RP §8(1.1.0)",
+    "uuid": "3a056853-fd57-4e2a-94f8-f2a24f85fc5d",
+    "version": [1, 1, 0],
     "min_engine_version": [1, 21, 50]
   },
   "modules": [
     {
       "description": "Advancements Pack by Alylica, Edited by AvgZing with custom advancements for use on the Oakridge: Survival Unhinged realm.",
       "type": "data",
-      "uuid": "7675947e-48ee-48db-8287-1092cce5a247",
-      "version": [1, 0, 0]
+      "uuid": "7cd9165e-b49e-4672-9607-efb348119fe1",
+      "version": [1, 1, 0]
     },
     {
       "type": "script",
       "language": "javascript",
-      "uuid": "177aa5e7-1c0a-4429-9716-afaa775fe1b5",
-      "version": [1, 0, 0],
+      "uuid": "a10151b5-b71d-4f2d-adea-cc659dcbb434",
+      "version": [1, 1, 0],
       "entry": "scripts/main.js"
     }
   ],
   "dependencies": [
     {
-      "uuid": "c143090b-989c-408c-8ce2-7880bcb50370",
-      "version": [1, 0, 0]
+      "uuid": "d92a4398-d163-42ef-9366-c4782d1930c1",
+      "version": [1, 1, 0]
     },
     {
       "module_name": "@minecraft/server-ui",
